@@ -1,0 +1,10 @@
+.about {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 32px;
+  text-align: left;
+}
+
+.about p {
+  margin-top: 16px;
+}
