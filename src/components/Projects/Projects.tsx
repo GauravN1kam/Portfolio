@@ -4,23 +4,30 @@ interface Project {
   title: string
   description: string
   href: string
+  tags: string[]
 }
 
-const projects: Project[] = [
+const iosProjects: Project[] = [
   {
-    title: 'Project One',
-    description: 'A short description of what this project does and the stack used.',
-    href: '#',
+    title: 'BBQuotes',
+    description:
+      'A SwiftUI app that fetches Breaking Bad characters and quotes from a REST API, with detail views for each character and their fate.',
+    href: 'https://github.com/GauravN1kam/BBQuotesApp',
+    tags: ['Swift', 'SwiftUI'],
   },
   {
-    title: 'Project Two',
-    description: 'A short description of what this project does and the stack used.',
-    href: '#',
+    title: 'JPApexPredators',
+    description:
+      'A SwiftUI app cataloging Jurassic Park apex predators, with detail pages and an interactive MapKit view of their locations.',
+    href: 'https://github.com/GauravN1kam/JPApexPredators',
+    tags: ['Swift', 'SwiftUI', 'MapKit'],
   },
   {
-    title: 'Project Three',
-    description: 'A short description of what this project does and the stack used.',
-    href: '#',
+    title: 'LOTR Coin Converter',
+    description:
+      'A SwiftUI currency converter themed around Middle-earth currencies, with live exchange rates and an icon-based currency picker.',
+    href: 'https://github.com/GauravN1kam/LordOfTheRingsCoinsConverter',
+    tags: ['Swift', 'SwiftUI'],
   },
 ]
 
@@ -28,11 +35,24 @@ function Projects() {
   return (
     <section id="projects" className={styles.projects}>
       <h2>Projects</h2>
+
+      <h3 className={styles.subheading}>iOS Apps</h3>
       <div className={styles.grid}>
-        {projects.map((project) => (
-          <a key={project.title} href={project.href} className={styles.card}>
-            <h3>{project.title}</h3>
+        {iosProjects.map((project) => (
+          <a
+            key={project.title}
+            href={project.href}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.card}
+          >
+            <h4>{project.title}</h4>
             <p>{project.description}</p>
+            <ul className={styles.tags}>
+              {project.tags.map((tag) => (
+                <li key={tag}>{tag}</li>
+              ))}
+            </ul>
           </a>
         ))}
       </div>
