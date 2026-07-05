@@ -1,0 +1,21 @@
+.projectCard {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.projectCard:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.title {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 14px;
+  margin-bottom: 14px;
+}

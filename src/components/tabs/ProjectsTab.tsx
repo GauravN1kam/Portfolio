@@ -1,4 +1,5 @@
-import styles from './Projects.module.css'
+import shared from '../../styles/shared.module.css'
+import styles from './ProjectsTab.module.css'
 
 interface Project {
   title: string
@@ -7,7 +8,7 @@ interface Project {
   tags: string[]
 }
 
-const iosProjects: Project[] = [
+const projects: Project[] = [
   {
     title: 'BBQuotes',
     description:
@@ -31,33 +32,33 @@ const iosProjects: Project[] = [
   },
 ]
 
-function Projects() {
+function ProjectsTab() {
   return (
-    <section id="projects" className={styles.projects}>
-      <h2>Projects</h2>
-
-      <h3 className={styles.subheading}>iOS Apps</h3>
-      <div className={styles.grid}>
-        {iosProjects.map((project) => (
+    <div>
+      <h1 className={shared.pageHeading}>Projects</h1>
+      <div className={shared.grid}>
+        {projects.map((project) => (
           <a
             key={project.title}
             href={project.href}
             target="_blank"
             rel="noreferrer"
-            className={styles.card}
+            className={`${shared.card} ${styles.projectCard}`}
           >
-            <h4>{project.title}</h4>
-            <p>{project.description}</p>
-            <ul className={styles.tags}>
+            <h3 className={styles.title}>{project.title}</h3>
+            <p className={styles.description}>{project.description}</p>
+            <ul className={shared.chips}>
               {project.tags.map((tag) => (
-                <li key={tag}>{tag}</li>
+                <li key={tag} className={shared.chip}>
+                  {tag}
+                </li>
               ))}
             </ul>
           </a>
         ))}
       </div>
-    </section>
+    </div>
   )
 }
 
-export default Projects
+export default ProjectsTab

@@ -1,0 +1,16 @@
+.paragraph {
+  max-width: 640px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.cardTitle {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.cardText {
+  font-size: 14px;
+  color: var(--text);
+}
