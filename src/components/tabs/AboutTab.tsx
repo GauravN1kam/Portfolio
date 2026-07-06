@@ -23,6 +23,7 @@ const whatIDo = [
 const skills = [
   'Swift', 'SwiftUI', 'UIKit', 'Combine', 'MapKit',
   'SwiftData', 'MVVM', 'XCTest', 'Xcode', 'Git',
+	'Jira', 'Kotlin', '.Net', 'WPF'
 ]
 
 function AboutTab() {
