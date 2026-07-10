@@ -1,4 +1,5 @@
 import styles from './Sidebar.module.css'
+import profilePhoto from '../../assets/profile.jpg'
 
 const contactFields = [
   { label: 'Email', value: 'workwithgauravpn@gmail.com', href: 'mailto:workwithgauravpn@gmail.com' },
@@ -22,9 +23,7 @@ const socials = [
 function Sidebar() {
   return (
     <aside className={styles.sidebar}>
-      <div className={styles.avatar} aria-hidden="true">
-        GN
-      </div>
+      <img className={styles.avatar} src={profilePhoto} alt="Gaurav Nikam" width="96" height="96" />
       <h1 className={styles.name}>Gaurav Nikam</h1>
       <span className={styles.badge}>iOS Developer</span>
 
